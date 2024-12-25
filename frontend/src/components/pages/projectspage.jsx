@@ -1,10 +1,10 @@
 import React from "react";
 
 function ProjectsPage() {
-    return (
-        <>
-        </>
-    );
+  return (
+    <>
+    </>
+  );
 }
 
 export default ProjectsPage;

@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { MantineProvider } from "@mantine/core";
 
 import "./global.scss";
 
@@ -12,14 +11,12 @@ import WritingPage from "./components/pages/writingpage.jsx";
 function App() {
     return (
         <Router> {/* Move Router to wrap MantineProvider and Navbar */}
-            <MantineProvider>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/writing" element={<WritingPage />} />
-                </Routes>
-            </MantineProvider>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/writing" element={<WritingPage />} />
+            </Routes>
         </Router>
     );
 }
