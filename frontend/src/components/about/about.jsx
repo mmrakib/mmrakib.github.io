@@ -33,7 +33,7 @@ function About() {
             <p className={`about-text ${visible ? "show" : ""}`}>
                 I'm a computer scientist from Sydney, Australia.
                 I have a passion for quantitative finance, econometrics, statistical data analytics and AI.
-                I also write about philosophy and science from time to time. This website is a portoflio for my work.
+                I also write about philosophy and science from time to time. This website is a portfolio for my work.
             </p>
 
             {/* Render Socials AFTER paragraph fade-in completes */}
