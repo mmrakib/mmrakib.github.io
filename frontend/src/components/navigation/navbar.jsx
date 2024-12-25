@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./navbar.scss";
 
@@ -45,13 +46,19 @@ function Navbar() {
                 className={`${opened ? "open" : animating ? "closing" : ""}`}
             >
                 <li className="navbar-link">
-                    <a href="#home">Home</a>
+                    <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                        Home
+                    </NavLink>
                 </li>
                 <li className="navbar-link">
-                    <a href="#projects">Projects</a>
+                    <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                        Projects
+                    </NavLink>
                 </li>
                 <li className="navbar-link">
-                    <a href="#writing">Writing</a>
+                    <NavLink to="/writing" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                        Writing
+                    </NavLink>
                 </li>
                 <li className="navbar-link">
                     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
