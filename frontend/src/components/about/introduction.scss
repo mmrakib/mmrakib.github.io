@@ -1,0 +1,81 @@
+$introduction-font-size: 5rem;
+
+.outer-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-container {
+    display: inline-flex;
+    align-items: center; /* Center-align each word vertically */
+    gap: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Each word is invisible by default (but space is still reserved). */
+.word {
+    display: inline-block; /* ensures the width is reserved */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: visible; /* avoid clipping if letters extend left/right */
+}
+
+.word.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Font classes for each word */
+.roboto {
+    font-family: "Roboto", sans-serif;
+    color: #e0e0e0;
+}
+
+/* "Mayaz." with a red → white gradient fill */
+.yellowtail {
+    font-family: "Yellowtail", cursive;
+    font-size: $introduction-font-size * 1.5;
+
+    line-height: 1.3;
+    padding: 0.1em 0.2em;
+
+    background: #e0e0e0; /* Fallback */
+    background: linear-gradient(
+        to right,
+        #fe5d5a 0%,
+        #e0e0e0 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+@media (max-width: 768px) {
+    /* In mobile view, we want "Hi," and "I'm" side by side, centered,
+       and "Mayaz." forced below. */
+    .text-container {
+        display: flex;
+        justify-content: center; /* center the words horizontally */
+        flex-wrap: wrap;        /* allow wrapping to a new line */
+    }
+
+    /* Force the third word (Mayaz.) onto a new line, centered. */
+    .text-container .word:nth-of-type(3) {
+        width: 100%;
+        text-align: center;
+        margin-top: 0rem;
+    }
+
+    /* Adjust outer container margin on mobile if you like */
+    .outer-center-container {
+        margin-top: 10%;
+    }
+}

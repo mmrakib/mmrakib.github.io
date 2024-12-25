@@ -1,0 +1,56 @@
+.socials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    margin-top: 15%;
+}
+
+.socials-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each item is initially hidden */
+.socials-item {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    a {
+        color: #e0e0e0;
+        font-size: 2rem;
+        display: inline-flex;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* When visibleIndex >= this item’s index, it fades in */
+.socials-item.show {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .socials-list {
+        gap: 1rem;
+    }
+
+    .socials-item a {
+        font-size: 2.5rem; /* bigger icons on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Optionally stack vertically on very small screens */
+    .socials-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
