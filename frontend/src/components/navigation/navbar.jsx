@@ -25,6 +25,13 @@ function Navbar() {
         }
     };
 
+    // Close the menu after a link is clicked
+    const handleLinkClick = () => {
+        if (opened) {
+            setOpened(false);
+        }
+    };
+
     return (
         <nav id="navbar" className={loaded ? "fade-in" : ""}>
             <div className="navbar-header">
@@ -46,22 +53,45 @@ function Navbar() {
                 className={`${opened ? "open" : animating ? "closing" : ""}`}
             >
                 <li className="navbar-link">
-                    <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                    <NavLink
+                        to="/"
+                        end
+                        className={({ isActive }) =>
+                            isActive ? "active" : "inactive"
+                        }
+                        onClick={handleLinkClick}
+                    >
                         Home
                     </NavLink>
                 </li>
                 <li className="navbar-link">
-                    <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-                        Projects
-                    </NavLink>
-                </li>
-                <li className="navbar-link">
-                    <NavLink to="/writing" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                    <NavLink
+                        to="/writing"
+                        className={({ isActive }) =>
+                            isActive ? "active" : "inactive"
+                        }
+                        onClick={handleLinkClick}
+                    >
                         Writing
                     </NavLink>
                 </li>
                 <li className="navbar-link">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    {/*<NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={handleLinkClick}>
+                        Projects
+                    </NavLink>*/}
+                    <a
+                        href="https://github.com/mmrakib"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={handleLinkClick}
+                    >
+                        Projects
+                    </a>
+                </li>
+                <li className="navbar-link">
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
+                        Resume
+                    </a>
                 </li>
             </ul>
         </nav>
