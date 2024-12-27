@@ -1,0 +1,154 @@
+.blog-page {
+    padding: 30px;
+    border-radius: 8px;
+    //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 800px; /* Wider content area */
+    margin: 0 auto; /* Center the blog detail */
+    color: #cfcfcf; /* Default text color */
+    margin-top: 1.5rem;
+}
+
+.blog-page h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-family: "Roboto", sans-serif;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 0.9em;
+    font-family: "Roboto", sans-serif;
+    color: #888888;
+}
+
+.blog-content {
+    line-height: 1.6;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+
+    /* Style for headers within Markdown */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    /* Style for paragraphs */
+    p {
+        color: #cfcfcf;
+        margin-bottom: 15px;
+    }
+
+    /* Style for links */
+    a {
+        color: #1e90ff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    /* Style for code blocks */
+    pre {
+        background-color: #333333;
+        border-radius: 6px;
+        overflow-x: auto;
+        margin-bottom: 15px;
+    }
+
+    code {
+        background-color: #333333;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+
+    /* Style for blockquotes */
+    blockquote {
+        border-left: 4px solid #555555;
+        padding-left: 16px;
+        color: #cccccc;
+        margin-bottom: 15px;
+    }
+
+    /* Style for lists */
+    ul, ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+    img {
+        max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Removes inline-block spacing */
+        margin: 2rem auto; /* Optional: Centers the image horizontally */
+    }
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #888888;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 3rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.back-icon-container {
+    margin-top: 2rem;
+}
+
+.back-icon {
+    color: #e0e0e0; /* Default icon color */
+    font-size: 32px; /* Set an appropriate size for the icon */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and transform transitions */
+    cursor: pointer; /* Indicate the icon is clickable */
+}
+
+/* Hover Effect */
+.back-icon:hover {
+    color: #ffffff; /* Change to white on hover */
+    transform: scale(1.3); /* Slightly enlarge the icon */
+}
+
+/* Active (Click) Effect */
+.back-icon:active {
+    transform: scale(1.3); /* Reset size on active/click */
+    color: #d1d1d1; /* Subtle color change on click */
+}
+
+/* Focus State for Accessibility */
+.back-icon:focus {
+    outline: none; /* Remove default outline */
+    color: #f0f0f0; /* Slightly lighter color for focus */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Adds a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+    /* Optional: Adjust the delay for staggered animations */
+    /* animation-delay: 0.2s; */
+}

@@ -1,0 +1,47 @@
+.writing-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 40rem; /* Align with blog list width */
+    margin: 0 auto; /* Center the writing page content */
+    padding: 20px;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid #555555; /* Subtle border */
+    border-radius: 4px;
+    background-color: #2c2c2c; /* Grayish background */
+    color: #ffffff; /* White text */
+    font-size: 0.9rem;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 2rem;
+}
+
+.search-input::placeholder {
+    color: #aaaaaa; /* Light gray placeholder text */
+}
+
+.search-input:focus {
+    background-color: #3a3a3a; /* Slightly lighter on focus */
+    border-color: #1e90ff; /* Highlight border on focus */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Adds a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+    /* Optional: Adjust the delay for staggered animations */
+    /* animation-delay: 0.2s; */
+}
