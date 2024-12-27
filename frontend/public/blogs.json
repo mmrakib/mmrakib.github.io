@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Understanding React Hooks",
+        "date": "2024-12-20T10:00:00Z",
+        "excerpt": "An in-depth look at React Hooks and how they can simplify your code.",
+        "filename": "post1.md"
+    },
+    {
+        "id": 2,
+        "title": "A Guide to Node.js Streams",
+        "date": "2024-12-18T14:30:00Z",
+        "excerpt": "Learn how to efficiently handle data streams in Node.js applications.",
+        "filename": "post2.md"
+    }
+]
