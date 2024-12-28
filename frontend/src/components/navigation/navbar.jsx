@@ -64,6 +64,7 @@ function Navbar() {
                         Home
                     </NavLink>
                 </li>
+                {/*
                 <li className="navbar-link">
                     <NavLink
                         to="/writing"
@@ -75,6 +76,7 @@ function Navbar() {
                         Writing
                     </NavLink>
                 </li>
+                */}
                 <li className="navbar-link">
                     {/*<NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={handleLinkClick}>
                         Projects
