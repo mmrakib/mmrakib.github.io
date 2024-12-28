@@ -18,7 +18,6 @@ function WritingPage() {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
-                // Sort blogs by date in descending order
                 const sortedBlogs = data.sort(
                     (a, b) => new Date(b.date) - new Date(a.date)
                 );

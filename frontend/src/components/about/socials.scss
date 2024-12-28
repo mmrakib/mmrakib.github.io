@@ -14,7 +14,6 @@
     padding: 0;
 }
 
-/* Each item is initially hidden */
 .socials-item {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -32,7 +31,6 @@
     }
 }
 
-/* When visibleIndex >= this item’s index, it fades in */
 .socials-item.show {
     opacity: 1;
 }
@@ -43,12 +41,11 @@
     }
 
     .socials-item a {
-        font-size: 2.5rem; /* bigger icons on smaller screens */
+        font-size: 2.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    /* Optionally stack vertically on very small screens */
     .socials-list {
         flex-direction: column;
         align-items: center;

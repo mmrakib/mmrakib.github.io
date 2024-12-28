@@ -41,11 +41,10 @@
 .blog-card-meta {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertically center the items */
+    align-items: center;
     font-size: 0.9em;
     color: #888888;
 
-    /* Remove default margins from <p> tags within .blog-meta */
     p {
         margin: 0;
     }
@@ -56,7 +55,7 @@
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Optional: Adds a slight upward movement */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -67,6 +66,4 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.6s forwards;
-    /* Optional: Adjust the delay for staggered animations */
-    /* animation-delay: 0.2s; */
 }

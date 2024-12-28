@@ -9,7 +9,6 @@ function Navbar() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        // Trigger page-load animation when component mounts
         setLoaded(true);
     }, []);
 
@@ -25,7 +24,6 @@ function Navbar() {
         }
     };
 
-    // Close the menu after a link is clicked
     const handleLinkClick = () => {
         if (opened) {
             setOpened(false);

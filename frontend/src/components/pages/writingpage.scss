@@ -2,17 +2,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 40rem; /* Align with blog list width */
-    margin: 0 auto; /* Center the writing page content */
+    max-width: 40rem;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .search-input {
     padding: 10px 15px;
-    border: 1px solid #555555; /* Subtle border */
+    border: 1px solid #555555;
     border-radius: 4px;
-    background-color: #2c2c2c; /* Grayish background */
-    color: #ffffff; /* White text */
+    background-color: #2c2c2c;
+    color: #ffffff;
     font-size: 0.9rem;
     outline: none;
     transition: background-color 0.3s, border-color 0.3s;
@@ -20,18 +20,18 @@
 }
 
 .search-input::placeholder {
-    color: #aaaaaa; /* Light gray placeholder text */
+    color: #aaaaaa;
 }
 
 .search-input:focus {
-    background-color: #3a3a3a; /* Slightly lighter on focus */
-    border-color: #1e90ff; /* Highlight border on focus */
+    background-color: #3a3a3a;
+    border-color: #1e90ff;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Optional: Adds a slight upward movement */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -42,6 +42,4 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.6s forwards;
-    /* Optional: Adjust the delay for staggered animations */
-    /* animation-delay: 0.2s; */
 }

@@ -6,10 +6,10 @@ import {
     FaGithub,
     FaEnvelope
 } from "react-icons/fa";
+
 import "./socials.scss";
 
 function Socials() {
-    // All icons + links in a single array
     const icons = [
         {
             link: "https://instagram.com/mayazrakib",
@@ -33,11 +33,9 @@ function Socials() {
         }
     ];
 
-    // Which icon index is currently visible
     const [visibleIndex, setVisibleIndex] = useState(-1);
 
     useEffect(() => {
-        // Reveal icons one by one every 500ms
         const interval = setInterval(() => {
             setVisibleIndex((prev) => {
                 if (prev < icons.length - 1) {

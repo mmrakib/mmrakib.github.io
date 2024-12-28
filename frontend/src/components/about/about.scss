@@ -1,6 +1,6 @@
 .about-container {
     margin: 2rem auto;
-    max-width: 60ch; /* limits line length for readability */
+    max-width: 60ch;
     padding: 1rem;
     text-align: center;
 }
@@ -11,18 +11,14 @@
     font-size: 1rem;
     line-height: 1.6;
     opacity: 0;
-    transition: opacity 1s ease; /* 1 second fade duration */
-    margin-bottom: 1rem;        /* space above the icons */
+    transition: opacity 1s ease;
+    margin-bottom: 1rem;
 }
 
 .about-text.show {
     opacity: 1;
 }
 
-/* 
- * Increase text size on mobile to improve readability.
- * Adjust breakpoints & sizes as you like.
- */
 @media (max-width: 768px) {
     .about-text {
         font-size: 1.3rem;

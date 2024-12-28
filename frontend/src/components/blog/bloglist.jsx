@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import BlogCard from "./blogcard.jsx";
+
 import "./bloglist.scss";
 
 function BlogList() {
@@ -10,7 +11,6 @@ function BlogList() {
         fetch("/blogs.json")
             .then((response) => response.json())
             .then((data) => {
-                // Sort blogs by date in descending order
                 const sortedBlogs = data.sort(
                     (a, b) => new Date(b.date) - new Date(a.date)
                 );
