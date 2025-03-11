@@ -29,8 +29,9 @@ function About() {
         <div className="about-container">
             <p className={`about-text ${visible ? "show" : ""}`}>
                 I'm a computer scientist from Sydney, Australia.
-                I have a passion for quantitative finance, econometrics and AI.
-                I also write about philosophy and science from time to time. This website is a portfolio for my work.
+                I have a passion for quantitative finance, data science and AI/ML.
+                I also write about philosophy and science from time to time.
+                This website acts as a portfolio for my work.
             </p>
 
             {showSocials && <Socials />}
