@@ -20,7 +20,7 @@ function Socials() {
             Icon: FaYoutube
         },
         {
-            link: "https://twitter.com/mayazrakib1",
+            link: "https://x.com/mayazrakibb",
             Icon: FaTwitter
         },
         {
